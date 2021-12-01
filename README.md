@@ -9,7 +9,7 @@ Based on this blog post: [https://fireship.io/snippets/setup-nestjs-on-cloud-fun
     ./backend/.firebaserc.example           # Example config for .firebaserc
 
 # Prerequisites
-- Install Node v12.21 and NPM [see recommended installs](#Recommended_installs)
+- Install Node v12.21 and NPM [see recommended installs](#recommended-installs)
 - Install Google Firebase CLI `npm i -g firebase-tools`
 - Google account and Firebase project created - [firebase.google.com](https://firebase.google.com/)
 
