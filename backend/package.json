@@ -6,7 +6,9 @@
   "private": true,
   "license": "UNLICENSED",
   "main": "dist/src/main.js",
-  "engines": {"node": "14"},
+  "engines": {
+    "node": "14"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
@@ -22,11 +24,13 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "dev-watch": "tsc -w",
-    "firebase-local": "firebase emulators:start"
+    "firebase-local": "firebase emulators:start",
+    "tmux-dev": "tmux new-session -s testproject 'npm run-script dev-watch'\\; \\\nsplit-window 'npm run-script firebase-local' \\; \\\nselect-layout tiled \\;"
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
+    "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^8.2.3",
     "express": "^4.17.1",
     "firebase-admin": "^10.0.0",
