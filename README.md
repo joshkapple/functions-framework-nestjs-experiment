@@ -20,7 +20,7 @@ Based on this blog post: [https://fireship.io/snippets/setup-nestjs-on-cloud-fun
 - following the example in `./backend/.firebaserc.example`, change the project id to your firebase project id and copy the contents into a new file `./backend/.firebaserc` - this file is git ignored
 - run tsc in watch mode `npm run-script dev-watch`
 - run firebase in local development mode - `npm run-script firebase-local`
-- visit your endpoints at [(http://localhost:5000/<your project id>/us-central1/api)]
+- visit your endpoints at [(http://localhost:5001/<your project id>/us-central1/api)]
 
 ### Recommended installs
 You may also want to install
