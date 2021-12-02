@@ -34,7 +34,4 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# firebase
-firebase-debug.log
-.firebaserc
 /backend.iml
