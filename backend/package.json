@@ -24,17 +24,16 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "dev-watch": "tsc -w",
-    "firebase-local": "firebase emulators:start",
-    "tmux-dev": "tmux new-session -s testproject 'npm run-script dev-watch'\\; \\\nsplit-window 'npm run-script firebase-local' \\; \\\nselect-layout tiled \\;"
+    "ff-local": "NODE_ENV=dev functions-framework --target=api"
   },
   "dependencies": {
+    "@google-cloud/functions-framework": "^2.0.0",
     "@nestjs/common": "^8.0.0",
+    "@nestjs/config": "^1.1.5",
     "@nestjs/core": "^8.0.0",
     "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^8.2.3",
     "express": "^4.17.1",
-    "firebase-admin": "^10.0.0",
-    "firebase-functions": "^3.16.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0"
