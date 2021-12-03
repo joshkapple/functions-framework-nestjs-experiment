@@ -24,7 +24,8 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "dev-watch": "tsc -w",
-    "ff-local": "NODE_ENV=dev functions-framework --target=api"
+    "ff-dev": "NODE_ENV=dev functions-framework --target=api",
+    "ff-prod": "NODE_ENV=prod functions-framework --target=api"
   },
   "dependencies": {
     "@google-cloud/functions-framework": "^2.0.0",
