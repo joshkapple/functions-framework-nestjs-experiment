@@ -1,0 +1,12 @@
+{
+  "name": "functions-framework-experiment",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "npm --prefix ./backend run-script start",
+    "install:backend": "npm --prefix ./backend install",
+    "build:backend": "npm --prefix ./backend run-script build",
+    "build:all": "npm run-script clean:all && npm run-script install:backend && npm run-script build:backend",
+    "clean:all": "npm --prefix ./backend run-script clean",
+    "postinstall": "npm run-script build:all"
+  }
+}

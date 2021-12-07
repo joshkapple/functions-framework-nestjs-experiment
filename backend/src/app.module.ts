@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { FooController } from './foo/foo.controller';
+import { ApiController } from './api/api.controller';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({
@@ -10,7 +10,7 @@ import { ConfigModule } from '@nestjs/config';
       envFilePath: [`.${process.env.NODE_ENV}.env`],
     }),
   ],
-  controllers: [AppController, FooController],
+  controllers: [AppController, ApiController],
   providers: [AppService],
 })
 export class AppModule {}

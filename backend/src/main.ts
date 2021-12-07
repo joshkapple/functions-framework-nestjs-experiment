@@ -1,12 +1,12 @@
 import { NestFactory } from '@nestjs/core';
 import { ExpressAdapter } from '@nestjs/platform-express';
 import { AppModule } from './app.module';
-import * as express from 'express';
+import * as Express from 'express';
 import { INestApplication } from '@nestjs/common';
 
 /** Note, bootstrapped from https://fireship.io/snippets/setup-nestjs-on-cloud-functions/ */
 
-const serverApi = express();
+const serverApi = Express();
 
 export const createNestServerApi = async (expressInstance) => {
   const app: INestApplication = await NestFactory.create(
