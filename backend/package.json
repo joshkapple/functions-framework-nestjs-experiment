@@ -14,7 +14,7 @@
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "NODE_ENV=prod functions-framework --target=api",
-    "start:dev": "concurrently --kill-others \"npm run-script dev-watch\" \"sleep 5 && npm run-script ff-dev\"",
+    "start:dev": "tsc-watch --onSuccess 'npm run-script ff-dev'",
     "start:debug": "nest start --debug --watch",
     "start:prod": "npm run-script start",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
@@ -23,8 +23,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "dev-watch": "tsc -w",
-    "ff-dev": "NODE_ENV=dev functions-framework --target=api",
+    "ff-dev": "NODE_ENV=dev functions-framework --target=api --debug",
     "clean": "rm -rf ./dist tsconfig.tsbuildinfo"
   },
   "dependencies": {
@@ -60,6 +59,7 @@
     "ts-jest": "^27.0.3",
     "ts-loader": "^9.2.3",
     "ts-node": "^10.0.0",
+    "tsc-watch": "^4.5.0",
     "tsconfig-paths": "^3.10.1",
     "typescript": "^4.3.5"
   },
